@@ -10,7 +10,7 @@ readme = "README.md"
 description = "Business Process eXecution Engine"
 
 [lib]
-crate-type = ["cdylib","lib"]
+crate-type = ["cdylib", "lib"]
 
 [dependencies]
 bpxe-bpmn-schema = { path = "../bpxe-bpmn-schema", version = "0.2.2-dev" }
@@ -25,11 +25,16 @@ thiserror = "1.0"
 downcast-rs = "1.2"
 dyn-clone = "1.0.4"
 tia = "1.0.0"
-tokio = { version = "1.1", features = ["macros", "rt-multi-thread", "time", "sync"] }
+tokio = { version = "1.1", features = [
+    "macros",
+    "rt-multi-thread",
+    "time",
+    "sync",
+] }
 futures = "0.3.12"
 serde = { version = "1.0.119", features = ["derive"] }
 smallvec = { version = "1.6.1", features = ["serde"] }
-rhai = { version = "0.19.10", features = ["sync", "serde"], optional = true }
+rhai = { version = "1.17", features = ["sync", "serde"], optional = true }
 async-trait = "0.1"
 factory = "0.1.2"
 num-bigint = { version = "0.3.1", features = ["serde"] }
@@ -54,7 +59,10 @@ wasm-rs-shared-channel = "0.1.0"
 wasm-bindgen-futures = "0.4.20"
 wasm-bindgen = { version = "0.2", features = ["serde-serialize"] }
 js-sys = "0.3"
-web-sys = { version = "0.3", features = ["console", "DedicatedWorkerGlobalScope"] }
+web-sys = { version = "0.3", features = [
+    "console",
+    "DedicatedWorkerGlobalScope",
+] }
 tokio = { version = "1.1", features = ["macros", "time", "sync"] }
 
 [target.wasm32-wasi.dependencies]

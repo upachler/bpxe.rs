@@ -7,7 +7,7 @@ use crate::data_object::{self, DataObject};
 use crate::sys::task;
 use async_trait::async_trait;
 use num_bigint::BigInt;
-use rhai::{Dynamic, RegisterFn, RegisterResultFn};
+use rhai::Dynamic;
 use std::any::{Any, TypeId};
 use std::ops::Deref;
 use std::sync::{Arc, Mutex};
